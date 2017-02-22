@@ -1,0 +1,12 @@
+[Unit]
+Description=Capturing MAC address
+After=network.target
+
+[Service]
+User=root
+Restart=always
+Type=simple
+ExecStart=/root/Scripts/startWirelessMon.sh
+
+[Install]
+WantedBy=multi-user.target

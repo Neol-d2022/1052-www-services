@@ -1,0 +1,12 @@
+[Unit]
+Description=Capturing MAC address(Bluetooth)
+After=network.target
+
+[Service]
+User=root
+Restart=always
+Type=simple
+ExecStart=/root/Scripts/startBluetoothMon.sh
+
+[Install]
+WantedBy=multi-user.target
